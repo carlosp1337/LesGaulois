@@ -21,7 +21,7 @@ public class Druide {
 	}
 
 	public void parler(String texte) {
-		System.out.println(prendreParole() + "<" + texte + ">");
+		System.out.println(prendreParole() + "«" + texte + "» ");
 	}
 
 	private String prendreParole() {
@@ -41,7 +41,13 @@ public class Druide {
 			parler("Je n'ai pas trouvé tous les ingrédients, ma potion est seulement de force " + forcePotion);
 		}
 		return forcePotion;
-}
+	}
+	
+	public void booster(Gaulois gaulois) {
+		if( gaulois.getNom()=="Obélix") {
+			parler( "Non, Obélix !... Tu n’auras pas de potion magique !");
+		}
+	}
 	
 	public static void main(String[] args) {
 		Druide panoramix = new Druide("Panoramix",5,10);
